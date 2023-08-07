@@ -1,9 +1,10 @@
 <div class="container">
-    <h2>Update Question</h2>
-    <form (ngSubmit)="onSubmit()">
+    <h2 style="text-decoration: underline;">Update Question</h2>
+    <br>
+    <form>
       <div class="form-group">
         <label for="category">Category:</label>
-        <select class="form-control" id="category" required [(ngModel)]="quiz.category" name="category">
+        <select id="category" name="category" style="width:13vmin;">
             <option value="Science">Science</option>
             <option value="History">History</option>
             <option value="Sports">Sports</option>
@@ -12,11 +13,11 @@
       </div>
       <div class="form-group">
         <label for="question">Question:</label>
-        <input type="text" class="form-control" id="question" required [(ngModel)]="quiz.question" name="question">
+        <input type="text" class="form-control" id="question" name="question">
       </div>
       <div class="form-group">
         <label for="questionNo">Question #:</label>
-        <select id="questionNo" required [(ngModel)]="quiz.questionNo" name="questionNo">
+        <select id="questionNo" name="questionNo">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -26,24 +27,25 @@
       </div>
       <div class="form-group">
         <label for="answerA">Answer A:</label>
-        <input type="text" class="form-control" id="answerA" required [(ngModel)]="quiz.answerA" name="answerA">
+        <input type="text" class="form-control" id="answerA" name="answerA">
       </div>
       <div class="form-group">
         <label for="answerB">Answer B:</label>
-        <input type="text" class="form-control" id="answerB" required [(ngModel)]="quiz.answerB" name="answerB">
+        <input type="text" class="form-control" id="answerB" name="answerB">
       </div>
       <div class="form-group">
         <label for="answerC">Answer C:</label>
-        <input type="text" class="form-control" id="answerC" required [(ngModel)]="quiz.answerC" name="answerC">
+        <input type="text" class="form-control" id="answerC" name="answerC">
       </div>
       <div class="form-group">
         <label for="answerD">Answer D:</label>
-        <input type="text" class="form-control" id="answerD" required [(ngModel)]="quiz.answerD" name="answerD">
+        <input type="text" class="form-control" id="answerD" name="answerD">
       </div>
       <div class="form-group">
         <label for="correctAnswer">Correct Answer:</label>
-        <input type="text" class="form-control" id="correctAnswer" required [(ngModel)]="quiz.correctAnswer" name="correctAnswer">
+        <input type="text" class="form-control" id="correctAnswer" name="correctAnswer">
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

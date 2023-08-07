@@ -1,8 +1,7 @@
-import mongoose from 'mongoose';
-import collections from '../collections';
-import { Quiz } from '../interface/quiz.interface';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const schema = new mongoose.Schema({
+const quizSchema = new Schema({
     category: {
         type: String,
         enum: ['Science', 'History', 'Sports', 'Television'],
@@ -42,6 +41,4 @@ const schema = new mongoose.Schema({
     timestamps: true
 });
 
-schema.set('toJSON', { virtuals: true });
-
-export = mongoose.model<Quiz>(collections.quizzes, schema);
+module.exports = mongoose.model('Quiz', quizSchema);
