@@ -3,7 +3,7 @@ var router = express.Router();
 
 const quizzesCtrl = require('../controllers/quizzes');
 
-router.get('/admin', quizzesCtrl.admin);
+router.get('/admin', quizzesCtrl.index);
 router.get('/new', quizzesCtrl.new);
 router.get('/update/:_id', quizzesCtrl.edit);
 router.get('/details/:_id', quizzesCtrl.show);

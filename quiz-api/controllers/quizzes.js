@@ -1,7 +1,7 @@
 const Quiz = require('../models/quiz');
 
 module.exports = {
-    admin,
+    index,
     show,
     new: newQuiz,
     create,
@@ -10,7 +10,7 @@ module.exports = {
     delete: deleteQuiz
 };
 
-async function admin(req,res) {
+async function index(req,res) {
     try {
       const quizzes = await Quiz.find({});
       res.render('/admin', { quizzes });
